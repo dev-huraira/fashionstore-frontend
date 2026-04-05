@@ -74,9 +74,9 @@ const projects = [
         icon: '🛍️',
         name: 'FashionStore E-Commerce Platform',
         desc: 'A fully-featured, production-ready multi-category fashion store with cart, wishlist, coupon system, Stripe payments, admin panel, real-time order management, and HTTP-only cookie authentication.',
-        badge: 'Live Project',
+        badge: 'Live',
         tags: ['Next.js', 'Node.js', 'MongoDB', 'Stripe', 'Botpress'],
-        url: null,
+        url: 'https://fashionsstore.vercel.app/',
     },
     {
         icon: '⚡',
