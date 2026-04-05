@@ -1,0 +1,296 @@
+/* ── Shared Profile Sub-page Styles ─────────────────────────────────── */
+.profile-section-page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.profile-section-page .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #007185;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+
+.profile-section-page .back-link:hover { text-decoration: underline; }
+
+.profile-section-page h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e3e6e6;
+    padding-bottom: 0.75rem;
+}
+
+/* ── Cards ─────────────────────────────────────────────────────────── */
+.ps-card {
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    background: #fff;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+}
+
+.ps-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 1.35rem;
+}
+
+.ps-card-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+    margin: 0;
+}
+
+.ps-card-header p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 2px 0 0;
+}
+
+.ps-edit-btn {
+    background: none;
+    border: none;
+    color: #007185;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.ps-edit-btn:hover { background: #f4f4f4; }
+
+/* ── Inline edit form ────────────────────────────────────────────────── */
+.ps-edit-form {
+    padding: 0 1.35rem 1.35rem;
+    border-top: 1px solid #e3e6e6;
+}
+
+.ps-edit-form label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333;
+    margin: 1rem 0 0.3rem;
+}
+
+.ps-edit-form input,
+.ps-edit-form select {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #a0aab4;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.ps-edit-form input:focus,
+.ps-edit-form select:focus {
+    outline: none;
+    border-color: #f90;
+    box-shadow: 0 0 0 2px rgba(255,153,0,.2);
+}
+
+.ps-form-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.ps-save-btn {
+    background: #f90;
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    padding: 0.55rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.ps-save-btn:hover { background: #e88600; }
+.ps-save-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.ps-cancel-btn {
+    background: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.ps-cancel-btn:hover { background: #f5f5f5; }
+
+/* ── Messages ───────────────────────────────────────────────────────── */
+.ps-success { color: #007600; font-size: 0.88rem; margin-top: 0.5rem; }
+.ps-error   { color: #c40000; font-size: 0.88rem; margin-top: 0.5rem; }
+
+/* ── Address cards ──────────────────────────────────────────────────── */
+.addr-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.addr-card {
+    border: 1px solid #d5d9d9;
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    background: #fff;
+    position: relative;
+}
+
+.addr-card.default-addr {
+    border-color: #f90;
+    box-shadow: 0 0 0 2px rgba(255,153,0,.25);
+}
+
+.addr-card-name {
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.2rem;
+}
+
+.addr-card p { font-size: 0.88rem; color: #444; margin: 0 0 0.15rem; }
+
+.addr-card-badge {
+    display: inline-block;
+    background: #f90;
+    color: #111;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+}
+
+.addr-card-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.addr-action-btn {
+    font-size: 0.82rem;
+    background: none;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.3rem 0.65rem;
+    cursor: pointer;
+    color: #007185;
+    transition: background 0.15s;
+}
+
+.addr-action-btn:hover { background: #f0fafa; }
+.addr-action-btn.danger { color: #c40000; }
+.addr-action-btn.danger:hover { background: #fff5f5; }
+
+.add-addr-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: none;
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    color: #007185;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    transition: border-color 0.2s, background 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.add-addr-btn:hover { border-color: #007185; background: #f0fafa; }
+
+/* ── Payment cards ──────────────────────────────────────────────────── */
+.payment-visual-card {
+    width: 320px;
+    max-width: 100%;
+    height: 190px;
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+
+.payment-visual-card .card-chip { font-size: 2rem; margin-bottom: 0.8rem; }
+.payment-visual-card .card-number { font-size: 1rem; letter-spacing: 0.18em; font-family: monospace; margin-bottom: 0.5rem; }
+.payment-visual-card .card-footer { display: flex; justify-content: space-between; font-size: 0.82rem; }
+.payment-visual-card .card-footer span { opacity: 0.85; }
+
+/* ── Prime page ─────────────────────────────────────────────────────── */
+.prime-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.prime-hero-badge {
+    display: inline-block;
+    background: #f90;
+    color: #111;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.prime-hero h2 { font-size: 2rem; margin: 0.5rem 0; }
+.prime-hero p  { opacity: 0.85; font-size: 1rem; max-width: 500px; margin: 0 auto 1.5rem; }
+
+.prime-cta-btn {
+    background: #f90;
+    color: #111;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.prime-cta-btn:hover { background: #e88600; }
+
+.prime-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.prime-benefit-card {
+    border: 1px solid #e3e6e6;
+    border-radius: 10px;
+    padding: 1.25rem;
+    background: #fff;
+    text-align: center;
+}
+
+.prime-benefit-icon { font-size: 2.2rem; margin-bottom: 0.6rem; }
+.prime-benefit-card h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.3rem; }
+.prime-benefit-card p  { font-size: 0.83rem; color: #555; margin: 0; }

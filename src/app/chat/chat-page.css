@@ -1,0 +1,105 @@
+/* ══════════════════════════════════════════════
+   Chat Page — Full-screen chatbot for mobile
+   ══════════════════════════════════════════════ */
+
+.chat-page {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh; /* dynamic viewport height — accounts for mobile browser chrome */
+  background: #f9fafb;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.chat-page-header {
+  background: linear-gradient(135deg, #232f3e 0%, #1a1a2e 100%);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+}
+
+.chat-page-back-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.chat-page-back-btn:hover,
+.chat-page-back-btn:active {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.05);
+}
+
+.chat-page-header-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ── Messages Area ── */
+.chat-page-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+
+.chat-page-messages::-webkit-scrollbar {
+  width: 4px;
+}
+.chat-page-messages::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+}
+
+/* Override max-width for full-page bubbles */
+.chat-page-messages .chatbot-msg-bubble {
+  max-width: calc(100vw - 100px);
+}
+
+/* ── Input Area ── */
+.chat-page-input-area {
+  padding: 12px 14px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.chat-page-input-area input {
+  flex: 1;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 24px;
+  padding: 11px 16px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  background: #f9fafb;
+}
+
+.chat-page-input-area input:focus {
+  border-color: #232f3e;
+  background: #fff;
+}
+
+.chat-page-input-area input::placeholder {
+  color: #aaa;
+}

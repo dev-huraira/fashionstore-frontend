@@ -1,0 +1,100 @@
+/* ─────────────────────────────────────────────────────────────────
+   PROFILE PAGE
+───────────────────────────────────────────────────────────────── */
+
+.profile-page-wrapper {
+  padding: 2rem 1.25rem 5rem;
+}
+
+/* Hero greeting */
+.profile-greeting {
+  padding: 2rem 0 1.5rem;
+}
+.profile-greeting h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+.profile-greeting p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Account grid */
+.account-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Account card */
+.account-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.4rem;
+  background: white;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.account-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255,153,0,0.35);
+}
+
+/* Card icon */
+.account-card-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: var(--accent-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card content */
+.account-card-content { flex: 1; min-width: 0; }
+.account-card-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--text-dark);
+}
+.account-card-content p {
+  font-size: 0.84rem;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+/* Chevron */
+.account-card-arrow {
+  font-size: 1rem;
+  color: #9ca3af;
+  flex-shrink: 0;
+  margin-top: 4px;
+  transition: transform var(--transition), color var(--transition);
+}
+.account-card:hover .account-card-arrow {
+  color: var(--secondary-color);
+  transform: translateX(3px);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .account-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 550px) {
+  .account-grid { grid-template-columns: 1fr; }
+  .profile-greeting h1 { font-size: 1.5rem; }
+}

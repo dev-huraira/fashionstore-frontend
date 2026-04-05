@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 54" fill="none" role="img" aria-label="FashionStore">
+  <!-- Icon: dark rounded square with F mark -->
+  <rect width="44" height="44" rx="11" fill="#131921"/>
+  <!-- Left amber accent bar -->
+  <rect x="0" y="0" width="5" height="44" rx="11" fill="#FF9900"/>
+  <rect x="0" y="11" width="5" height="33" fill="#FF9900"/>
+  <!-- F vertical stem -->
+  <rect x="11" y="11" width="5.5" height="22" rx="2.5" fill="white"/>
+  <!-- F top bar -->
+  <rect x="11" y="11" width="21" height="5.5" rx="2.5" fill="white"/>
+  <!-- F mid bar -->
+  <rect x="11" y="20" width="15.5" height="4.5" rx="2.25" fill="rgba(255,255,255,0.7)"/>
+  <!-- Amber dot -->
+  <circle cx="35" cy="35" r="4" fill="#FF9900"/>
+
+  <!-- Wordmark: FASHION -->
+  <text x="57" y="28"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="20"
+    font-weight="800"
+    letter-spacing="-0.4"
+    fill="#ffffff">FASHION</text>
+  <!-- Wordmark: STORE -->
+  <text x="58" y="42"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    font-weight="600"
+    letter-spacing="3"
+    fill="#FF9900">STORE</text>
+</svg>
