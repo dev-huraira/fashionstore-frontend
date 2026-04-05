@@ -1,16 +1,42 @@
-import '../info-pages.css';
+import '../info-shared.css';
 
 export default function ReturnsPage() {
+    const steps = [
+        { text: <>Go to <a href="/orders"><strong>Your Orders</strong></a> and select the item you wish to return.</> },
+        { text: <>Click <strong>"Return or Replace Items"</strong> and choose your reason.</> },
+        { text: <>Print the <strong>free prepaid return label</strong> we send to your email.</> },
+        { text: <>Pack the item securely and drop it at any <strong>courier location</strong>.</> },
+        { text: <>Refund processed within <strong>5–7 business days</strong> after we receive the item.</> },
+    ];
+
     return (
-        <div className="info-page">
-            <div className="info-hero">
-                <h1>Returns &amp; Replacements</h1>
-                <p>Not happy with your purchase? No problem. We offer a simple, hassle-free 30-day return policy on all items.</p>
+        <div className="ip-page">
+            <div className="ip-hero">
+                <div className="ip-hero-badge">🔄 Hassle-Free Policy</div>
+                <h1>Returns & Replacements</h1>
+                <p>Not happy with your purchase? No problem. We offer a simple 30-day return policy on all items — completely free.</p>
             </div>
 
-            <div className="info-grid">
-                <div className="info-section">
-                    <h2>✅ What can be returned?</h2>
+            {/* Stats */}
+            <div className="ip-stats">
+                <div className="ip-stat-card">
+                    <div className="ip-stat-value">30</div>
+                    <div className="ip-stat-label">Days to Return</div>
+                </div>
+                <div className="ip-stat-card">
+                    <div className="ip-stat-value">FREE</div>
+                    <div className="ip-stat-label">Return Pickup</div>
+                </div>
+                <div className="ip-stat-card">
+                    <div className="ip-stat-value">5–7</div>
+                    <div className="ip-stat-label">Days to Refund</div>
+                </div>
+            </div>
+
+            {/* Can / Cannot */}
+            <div className="ip-grid">
+                <div className="ip-section">
+                    <div className="ip-section-title"><span>✅</span> What Can Be Returned</div>
                     <ul>
                         <li>Items in original, unworn condition</li>
                         <li>Items with original tags still attached</li>
@@ -18,8 +44,8 @@ export default function ReturnsPage() {
                         <li>Defective or wrong items (anytime)</li>
                     </ul>
                 </div>
-                <div className="info-section">
-                    <h2>❌ What cannot be returned?</h2>
+                <div className="ip-section">
+                    <div className="ip-section-title"><span>❌</span> What Cannot Be Returned</div>
                     <ul>
                         <li>Items marked <strong>Final Sale</strong></li>
                         <li>Worn, washed, or damaged items</li>
@@ -29,36 +55,41 @@ export default function ReturnsPage() {
                 </div>
             </div>
 
-            <div className="info-section">
-                <h2>📋 How to Return — Step by Step</h2>
-                <ol style={{ paddingLeft: '1.25rem', lineHeight: 2 }}>
-                    <li>Go to <a href="/orders" style={{ color: '#f90' }}><strong>Your Orders</strong></a> and select the item you wish to return.</li>
-                    <li>Click <strong>"Return or Replace Items"</strong> and select a reason.</li>
-                    <li>Print the free prepaid return label we email you.</li>
-                    <li>Pack the item securely and drop it at any courier location.</li>
-                    <li>Your refund will be processed within <strong>5–7 business days</strong> after we receive the item.</li>
-                </ol>
+            {/* Step by step */}
+            <div className="ip-section">
+                <div className="ip-section-title"><span>📋</span> How to Return — Step by Step</div>
+                {steps.map((s, i) => (
+                    <div key={i} className="ip-step">
+                        <div className="ip-step-num">{i + 1}</div>
+                        <div className="ip-step-text">{s.text}</div>
+                    </div>
+                ))}
             </div>
 
-            <div className="info-grid">
-                <div className="info-section">
-                    <h2>💳 Refund Methods</h2>
+            {/* Refund & Replacement */}
+            <div className="ip-grid">
+                <div className="ip-section">
+                    <div className="ip-section-title"><span>💳</span> Refund Methods</div>
                     <ul>
-                        <li>Original payment method (default)</li>
-                        <li>FashionStore credit (instant)</li>
-                        <li>Bank transfer (3–5 days)</li>
+                        <li>Original payment method <em>(default)</em></li>
+                        <li>FashionStore credit <em>(instant)</em></li>
+                        <li>Bank transfer <em>(3–5 days)</em></li>
                     </ul>
                 </div>
-                <div className="info-section">
-                    <h2>🔄 Replacements</h2>
-                    <p>Need a different size or color? Select <strong>"Replace"</strong> instead of "Return" and we will ship the replacement for free once we receive the original item.</p>
+                <div className="ip-section">
+                    <div className="ip-section-title"><span>🔄</span> Replacements</div>
+                    <p>Need a different size or color? Select <strong>"Replace"</strong> instead of "Return" and we'll ship the replacement for free once we receive the original.</p>
                 </div>
             </div>
 
-            <div className="info-section" style={{ textAlign: 'center' }}>
-                <h2>Need help with a return?</h2>
-                <p>Our support team is available around the clock to assist you.</p>
-                <a href="/help" className="info-btn">Contact Support</a>
+            {/* CTA */}
+            <div className="ip-cta">
+                <h2>Need Help With a Return?</h2>
+                <p>Our support team is available around the clock. We'll get you sorted quickly.</p>
+                <div className="ip-btn-group">
+                    <a href="mailto:huraira3076@gmail.com" className="ip-btn-primary">📧 Email Support</a>
+                    <a href="/orders" className="ip-btn-outline">📦 Go to My Orders</a>
+                </div>
             </div>
         </div>
     );
