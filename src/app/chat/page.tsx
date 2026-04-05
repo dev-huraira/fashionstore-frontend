@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import '../../../components/chatbot.css';
+import '../../components/chatbot.css';
 import './chat-page.css';
 
 /* ─── Knowledge Base (same as widget) ─── */
