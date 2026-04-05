@@ -1,0 +1,226 @@
+/* ─── Help Page Styles ─────────────────────────────────────────────── */
+
+.help-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+/* ── Hero ── */
+.help-hero {
+  background: linear-gradient(135deg, #232f3e 0%, #37475a 100%);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.help-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 159, 0, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.help-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+.help-hero p {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.help-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 200, 0, 0.18);
+  color: #ffd814;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 200, 0, 0.25);
+}
+
+/* ── Contact Cards ── */
+.help-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.help-contact-card {
+  background: white;
+  border: 1px solid #e8ecef;
+  border-radius: 14px;
+  padding: 1.6rem 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.help-contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(35,47,62,0.12);
+  border-color: #ffd814;
+}
+.help-contact-card-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.help-contact-card h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #232f3e;
+  margin-bottom: 0.35rem;
+}
+.help-contact-card p, .help-contact-card a {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-decoration: none;
+  line-height: 1.5;
+}
+.help-contact-card a:hover { color: #ff9f00; }
+
+/* ── FAQ Section ── */
+.help-section {
+  background: white;
+  border: 1px solid #e8ecef;
+  border-radius: 14px;
+  padding: 2rem 2.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.help-section-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #232f3e;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #ffd814;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.help-faq-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+.help-faq-item:last-child { border-bottom: none; }
+.help-faq-q {
+  font-weight: 700;
+  color: #232f3e;
+  font-size: 0.93rem;
+  margin-bottom: 0.4rem;
+}
+.help-faq-a {
+  color: #6b7280;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+/* ── CTA Section ── */
+.help-cta-section {
+  background: linear-gradient(135deg, #232f3e 0%, #37475a 100%);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: white;
+  margin-top: 0.5rem;
+}
+.help-cta-section h2 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+.help-cta-section p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.93rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.help-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffd814;
+  color: #232f3e;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid #f7ca00;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(255, 216, 20, 0.35);
+}
+.help-email-btn:hover {
+  background: #f7ca00;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 216, 20, 0.5);
+}
+.help-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: border-color 0.2s ease, background 0.2s ease;
+  margin-left: 0.75rem;
+}
+.help-phone-btn:hover {
+  border-color: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.08);
+}
+.help-btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ── Response Time Badge ── */
+.help-response-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  margin-top: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+@media (max-width: 640px) {
+  .help-page { padding: 1.5rem 1rem 4rem; }
+  .help-hero { padding: 2rem 1.25rem; }
+  .help-hero h1 { font-size: 1.6rem; }
+  .help-contact-grid { grid-template-columns: 1fr; }
+  .help-section { padding: 1.5rem 1.25rem; }
+  .help-cta-section { padding: 2rem 1.25rem; }
+  .help-phone-btn { margin-left: 0; }
+}
