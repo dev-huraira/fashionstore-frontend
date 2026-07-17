@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FashionStore
+
+**Premium Fashion for Everyone**
+
+🔗 **Live Demo:** [https://fashionsstore.vercel.app/](https://fashionsstore.vercel.app/)
+
+## Overview
+
+FashionStore is a full-stack e-commerce web app for shopping the latest trends in men's, women's, and kids' clothing. It's built around clear category browsing, trending/best-seller sections, and a simple, clean shopping flow — with free shipping over $50 and easy returns.
+
+## Key Features
+
+- 🛍️ **Category Browsing** — Dedicated sections for Men's, Women's, and Kids' fashion.
+- 👕 **Sub-Categories** — Tops & Tees, Bottoms, Activewear, and Shoes under each category.
+- 🔥 **Top Trending & Best Sellers** — Curated highlights of popular items.
+- ✨ **New Arrivals** — Easily browse the latest additions.
+- 🏷️ **Sale & Deals** — Dedicated section for discounted items.
+- 🔎 **Search** — Search across the full catalog.
+- 🚚 **Free Shipping & Easy Returns** — Free shipping on orders over $50.
+
+## Site Structure
+
+| Section | Route |
+|---|---|
+| Men's Fashion | `/category/men` |
+| Women's Fashion | `/category/women` |
+| Kids' Fashion | `/category/kids` |
+| Best Sellers | `/best-sellers` |
+| New Arrivals / Search | `/search` |
+| Sub-category filter | `/category/{men\|women\|kids}?sub={tops\|bottoms\|activewear\|shoes}` |
+
+## Tech Stack
+
+> Deployed on **Vercel**. *(Add your specific stack here — e.g. React + Vite + TailwindCSS frontend, Node.js/Express + MongoDB backend, as used in your other full-stack projects.)*
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+cd fashionstore
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) (or your configured port) to view it locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Live Link
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🌐 [https://fashionsstore.vercel.app/](https://fashionsstore.vercel.app/)
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
+Built by **Huraira** ([@dev-huraira](https://github.com/dev-huraira))
+Portfolio: [devhuraira.vercel.app](https://devhuraira.vercel.app)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
